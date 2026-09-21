@@ -1,7 +1,5 @@
 # 🚀 AI-3D-Creator (A3C)
 
-[![Python Version](https://shields.io)](https://python.org)
-
 **AI-3D-Creator (A3C)** 是一个颠覆传统 CAD 的敏捷开发工具。它打通了 **“人类自然语言输入 ➔ AI 直出 Python CAD 脚本 ➔ 本地一键编译 ➔ 标准 3MF 工业模型”** 的全自动闭环。
 
 本工具专门为 **3D 打印机设计零件** 打造。你不需要学习复杂的 SolidWorks、Fusion 360 或 Blender，只需用大白话描述你的零件需求（如：帮我做一个长50mm，带内沉头螺丝孔的L型角码），AI 就会为你生成完美的、无破面的 `.3mf` 实体几何模型，可直接导入**拓竹（Bambu Studio）**、Cura 等切片软件直接上机打印！
@@ -49,12 +47,18 @@ python -m venv cq_env
 .\cq_env\Scripts\Activate.ps1
 # (此时你的命令行开头应该会出现 (cq_env) 字样，说明激活成功)
 
-# 3. 升级 pip 并永久配置中国清华大学镜像源
-python -m pip install --upgrade pip
-pip config set global.index-url https://tsinghua.edu.cn
+# 3. 配置国内镜像加速下载
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
 
-# 4. 一键安装核心 CAD 建模库
+# 4. （可选）设置信任该主机，避免 SSL 警告
+pip config set global.trusted-host pypi.tuna.tsinghua.edu.cn
+
+# 5. 升级 pip 并永久配置中国清华大学镜像源
+python -m pip install --upgrade pip
+
+# 6. 一键安装核心 CAD 建模库
 pip install cadquery
+
 ```
 
 ---
