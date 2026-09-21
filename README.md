@@ -98,10 +98,10 @@ AI 回复确认后，直接用大白话告诉它你需要什么零件（例如�
 python build_mesh.py
 ```
 只需不到 1 秒钟，当前目录下就会自动生成一个高精度的 **`output_model.3mf`** 文件！
+(如果运行 build_mesh.py 程序时报错，请把完整的错误内容复制粘贴回传给AI, 修正build_mesh.py后重新运行即可)
 
-### 🖨️ 第 3 步：切片与 3D 打印
-* **快速预览**：双击 `output_model.3mf` 即可直接通过 Windows 内置的 “3D 查看器” 观察结构。
-* **切片打印**：直接将该文件拖入 **拓竹切片软件 (Bambu Studio)**、Cura 或 PrusaSlicer。模型完全闭合，可以直接生成 G-code 并发送给你的 3D 打印机开始打印！
+### 🖨️ 第 3 步：切片与 3D 打印 
+* **预览切片打印**：直接将该文件拖入 **拓竹切片软件 (Bambu Studio)**、Cura 或 PrusaSlicer。模型完全闭合，可以直接生成 G-code 并发送给你的 3D 打印机开始打印！
 
 ---
 
